@@ -14,15 +14,65 @@
 7 verbose currentBranch master
 8 silly remoteBranchExists
 9 silly isBehindUpstream
-10 error Error: Command failed: git remote update
-10 error fatal: I don't handle protocol 'git@https'
-10 error error: Could not fetch origin
-10 error
-10 error Fetching origin
-10 error
-10 error     at makeError (C:\Users\C28591\Desktop\reactApp\yarnEx\node_modules\execa\index.js:174:9)
-10 error     at Function.module.exports.sync (C:\Users\C28591\Desktop\reactApp\yarnEx\node_modules\execa\index.js:338:15)
-10 error     at Object.execSync (C:\Users\C28591\Desktop\reactApp\yarnEx\node_modules\@lerna\child-process\index.js:26:16)
-10 error     at updateRemote (C:\Users\C28591\Desktop\reactApp\yarnEx\node_modules\@lerna\version\lib\is-behind-upstream.js:26:16)
-10 error     at isBehindUpstream (C:\Users\C28591\Desktop\reactApp\yarnEx\node_modules\@lerna\version\lib\is-behind-upstream.js:11:3)
-10 error     at VersionCommand.initialize (C:\Users\C28591\Desktop\reactApp\yarnEx\node_modules\@lerna\version\index.js:149:9)
+10 silly isBehindUpstream master is behind origin/master by 0 commit(s) and ahead by 1
+11 silly hasTags
+12 verbose hasTags true
+13 silly git-describe.sync "v1.0.1-2-g0344285" => {"lastTagName":"v1.0.1","lastVersion":"v1.0.1","refCount":"2","sha":"0344285","isDirty":false}
+14 info Looking for changed packages since v1.0.1
+15 silly checking diff packages/common
+16 silly no diff found in @yarnEx/common
+17 silly checking diff packages/server
+18 silly found diff in packages/server/index.js
+19 verbose filtered diff [ 'packages/server/index.js' ]
+20 verbose updated @yarnEx/server
+21 verbose git-describe undefined => "v1.0.1-2-g0344285"
+22 silly git-describe parsed => {"lastTagName":"v1.0.1","lastVersion":"v1.0.1","refCount":"2","sha":"0344285","isDirty":false}
+23 silly fixed for @yarnEx/server at C:\Users\C28591\Desktop\reactApp\yarnEx\packages\server
+24 verbose getChangelogConfig using preset "conventional-changelog-angular"
+25 silly npa { type: 'tag',
+25 silly npa   registry: true,
+25 silly npa   where: undefined,
+25 silly npa   raw: 'conventional-changelog-angular',
+25 silly npa   name: 'conventional-changelog-angular',
+25 silly npa   escapedName: 'conventional-changelog-angular',
+25 silly npa   scope: undefined,
+25 silly npa   rawSpec: '',
+25 silly npa   saveSpec: null,
+25 silly npa   fetchSpec: 'latest',
+25 silly npa   gitRange: undefined,
+25 silly npa   gitCommittish: undefined,
+25 silly npa   hosted: undefined }
+26 verbose getChangelogConfig Attempting to resolve preset "conventional-changelog-angular"
+27 info getChangelogConfig Successfully resolved preset "conventional-changelog-angular"
+28 verbose fixed increment 1.0.1 by patch
+29 info auto-confirmed
+30 info execute Skipping releases
+31 silly lifecycle No script for "preversion" in "yarnEx", continuing
+32 silly lifecycle No script for "preversion" in "@yarnEx/server", continuing
+33 silly lifecycle No script for "version" in "@yarnEx/server", continuing
+34 silly fixed for @yarnEx/server at C:\Users\C28591\Desktop\reactApp\yarnEx\packages\server
+35 silly fixed writing new entry: "## [1.0.2](https://github.com/cipriancozma/yarnExample/compare/v1.0.1...v1.0.2) (2019-07-19)\n\n**Note:** Version bump only for package @yarnEx/server\n\n\n\n"
+36 verbose fixed wrote C:\Users\C28591\Desktop\reactApp\yarnEx\packages\server\CHANGELOG.md
+37 silly root for yarnEx at C:\Users\C28591\Desktop\reactApp\yarnEx
+38 silly root writing new entry: "## [1.0.2](https://github.com/cipriancozma/yarnExample/compare/v1.0.1...v1.0.2) (2019-07-19)\n\n**Note:** Version bump only for package yarnEx\n\n\n\n"
+39 verbose root wrote C:\Users\C28591\Desktop\reactApp\yarnEx\CHANGELOG.md
+40 silly lifecycle No script for "version" in "yarnEx", continuing
+41 silly gitAdd [ 'C:\\Users\\C28591\\Desktop\\reactApp\\yarnEx\\packages\\server\\package.json',
+41 silly gitAdd   'C:\\Users\\C28591\\Desktop\\reactApp\\yarnEx\\packages\\server\\CHANGELOG.md',
+41 silly gitAdd   'C:\\Users\\C28591\\Desktop\\reactApp\\yarnEx\\CHANGELOG.md',
+41 silly gitAdd   'C:\\Users\\C28591\\Desktop\\reactApp\\yarnEx\\lerna.json' ]
+42 silly gitCommit v1.0.2
+43 verbose git [ 'commit', '-m', 'v1.0.2' ]
+44 silly gitTag v1.0.2
+45 verbose git [ 'tag', 'v1.0.2', '-m', 'v1.0.2' ]
+46 silly lifecycle No script for "postversion" in "@yarnEx/server", continuing
+47 silly lifecycle No script for "postversion" in "yarnEx", continuing
+48 info git Pushing tags...
+49 silly gitPush origin master
+50 error Error: Command failed: git push --follow-tags --no-verify origin master
+50 error bash: /dev/tty: No such device or address
+50 error error: failed to execute prompt script (exit code 1)
+50 error fatal: could not read Username for 'https://github.com': No error
+50 error
+50 error     at makeError (C:\Users\C28591\Desktop\reactApp\yarnEx\node_modules\execa\index.js:174:9)
+50 error     at Promise.all.then.arr (C:\Users\C28591\Desktop\reactApp\yarnEx\node_modules\execa\index.js:278:16)
